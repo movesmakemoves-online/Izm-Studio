@@ -325,6 +325,24 @@ p { margin: 0; color: var(--text-dim); }
 }
 .pricing-note { text-align: center; color: var(--text-faint); font-size: 0.88rem; margin-top: 40px; }
 
+/* ---------- Custom build callout ---------- */
+.custom-build-card {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(124,92,255,0.15), 0 20px 50px rgba(124,92,255,0.08);
+}
+.custom-build-card .section-sub { margin: 0 auto 24px; }
+.custom-build-card .detail-list {
+  text-align: left;
+  max-width: 380px;
+  margin: 0 auto 32px;
+}
+
 /* ---------- Work / portfolio ---------- */
 .work-tile {
   aspect-ratio: 4 / 3;
