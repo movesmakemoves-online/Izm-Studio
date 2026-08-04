@@ -55,7 +55,7 @@
       <div class="contact-copy reveal">
         <div class="contact-detail">
           <strong>Email</strong>
-          <a href="mailto:hello@digitalspectrumlabs.com">hello@digitalspectrumlabs.com</a>
+          <a href="mailto:movesmakemoves@gmail.com">movesmakemoves@gmail.com</a>
         </div>
         <div class="contact-detail">
           <strong>Response Time</strong>
@@ -67,7 +67,11 @@
         </div>
       </div>
 
-      <form class="contact-form reveal" id="contact-form">
+      <form class="contact-form reveal" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden-field" hidden>
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
         <div class="form-row">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -79,10 +83,11 @@
         <div class="form-row">
           <label for="service">Service</label>
           <select id="service" name="service">
-            <option>Graphic Design</option>
             <option>Website / App / Game</option>
-            <option>Music Video / Film Editing</option>
             <option>AI for Business</option>
+            <option>Growth &amp; Marketing</option>
+            <option>Video Production</option>
+            <option>Graphic Design</option>
             <option>Something else / mixed</option>
           </select>
         </div>

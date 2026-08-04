@@ -7,8 +7,10 @@
 - [x] New brand: name, logo (prism/spectrum mark), full site rename
 - [x] Growth & Marketing added as a 5th service line (SEO, email marketing, social retainers, CRM setup)
 - [x] Monthly Retainer tier added to Packages, alongside Basic/Standard/Enhanced and Custom Web Applications
+- [x] Services reordered site-wide: Websites/Apps/Games, AI for Business, Growth & Marketing, Video Production (renamed from Music Video & Film Editing), Graphic Design
 - [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match)
 - [x] Deployed to Vercel (currently on a "Pro Trial" — needs migrating to Netlify instead, since Vercel's free tier bans commercial use and Netlify's allows it)
+- [x] **Fixed a real bug (2026-08-04): the contact form had no code behind it at all** — "Send Request" did nothing. Now wired as a Netlify Form (works automatically once deployed on Netlify, zero backend needed) with a JS fallback message if it ever fails. Also fixed the visible contact email, which pointed at hello@digitalspectrumlabs.com — a mailbox that doesn't exist yet since the domain isn't purchased — now points at movesmakemoves@gmail.com until real business email exists.
 
 ## What's left — grouped by what's needed from you
 
@@ -21,7 +23,14 @@
 
 ### To make the site live and findable
 6. **Domain name** (digitalspectrumlabs.com or .co.uk) — not yet purchased
-7. **Business email** — decided: new dedicated address, not personal Gmail. Plan: free Cloudflare Email Routing forwarding to existing Gmail, set up once the domain exists (~5 min, £0 cost)
+7. **Business email + automatic lead capture** — built 2026-08-04, not deployed yet:
+   `email-worker/` in this project folder is a real Cloudflare Email Worker that forwards
+   `leads@digitalspectrumlabs.com` to your Gmail (nothing lost) AND logs each lead as a file
+   in the GitHub repo (`leads/inbox/`) so Claude can see new leads without inbox access —
+   built this way specifically because Gmail and the Netlify/Cloudflare dashboards are
+   blocked from Claude's browser automation, so GitHub is the one place that actually works.
+   Full walkthrough: `email-worker/SETUP.md` — needs the domain (below) first, then ~15 min
+   of one-time setup. £0 cost beyond the domain itself.
 8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
    change the repo name field to `Digital-Spectrum-Labs`, click Rename
 9. **Move hosting from Vercel to Netlify** (Vercel's free tier bans commercial use, Netlify's
@@ -30,6 +39,10 @@
    - Add new site → Import an existing project → GitHub → select the (renamed) repo
    - Leave Build command blank, Publish directory `/` — it's a static site, nothing to build
    - Deploy
+   - **Then turn on form notifications** so contact-form submissions actually reach you:
+     Site settings → Forms → Form notifications → Add notification → Email notification →
+     enter movesmakemoves@gmail.com → Save. Without this step, submissions are captured by
+     Netlify but nothing tells you they arrived.
 
 ### Content — in progress
 10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,

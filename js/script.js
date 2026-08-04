@@ -41,3 +41,25 @@ document.querySelectorAll('.nav-link').forEach((link) => {
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Contact form (Netlify Forms — only actually submits once deployed on Netlify)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formStatus = document.getElementById('form-status');
+    const formData = new FormData(contactForm);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        formStatus.textContent = "Thanks — we've got your request and will follow up within 1–2 business days.";
+        contactForm.reset();
+      })
+      .catch(() => {
+        formStatus.textContent = 'Something went wrong sending that — please email movesmakemoves@gmail.com directly instead.';
+      });
+  });
+}

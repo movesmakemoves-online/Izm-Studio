@@ -1,0 +1,17 @@
+name = "dsl-lead-router"
+main = "src/worker.js"
+compatibility_date = "2026-08-01"
+
+[vars]
+# GitHub repo this worker logs new leads into (as leads/inbox/<timestamp>.json).
+# Update GITHUB_REPO once the repo rename (Izm-Studio -> Digital-Spectrum-Labs) is done.
+GITHUB_OWNER = "movesmakemoves-online"
+GITHUB_REPO = "Izm-Studio"
+
+# Every incoming lead email is forwarded here first, no matter what — this address must be
+# a verified destination address in Cloudflare Email Routing before deploying.
+FORWARD_TO = "movesmakemoves@gmail.com"
+
+# GITHUB_TOKEN is NOT set here — it's a secret, set separately with:
+#   npx wrangler secret put GITHUB_TOKEN
+# See SETUP.md for the full walkthrough.
