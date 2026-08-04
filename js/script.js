@@ -39,28 +39,5 @@ document.querySelectorAll('.nav-link').forEach((link) => {
   }
 });
 
-// Contact form (no backend wired up yet — shows confirmation + mailto fallback)
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const service = document.getElementById('service').value;
-  const pkg = document.getElementById('package').value;
-  const message = document.getElementById('message').value.trim();
-
-  const subject = encodeURIComponent(`New project inquiry — ${service}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nService: ${service}\nPackage: ${pkg}\n\n${message}`
-  );
-
-  formStatus.textContent = 'Thanks! Opening your email client to send this request…';
-  window.location.href = `mailto:hello@izmmediaservices.com?subject=${subject}&body=${body}`;
-  contactForm.reset();
-});
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
