@@ -11,6 +11,7 @@
 - [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match)
 - [x] Deployed to Vercel (currently on a "Pro Trial" — needs migrating to Netlify instead, since Vercel's free tier bans commercial use and Netlify's allows it)
 - [x] **Fixed a real bug (2026-08-04): the contact form had no code behind it at all** — "Send Request" did nothing. Now wired as a Netlify Form (works automatically once deployed on Netlify, zero backend needed) with a JS fallback message if it ever fails. Also fixed the visible contact email, which pointed at hello@digitalspectrumlabs.com — a mailbox that doesn't exist yet since the domain isn't purchased — now points at movesmakemoves@gmail.com until real business email exists.
+- [x] **Deployed to Netlify (2026-08-04)** — live at digitalspectrum.netlify.app, deploying from the GitHub repo. Made public (was gated behind Netlify's team-login wall at first). Form notifications wired to movesmakemoves@gmail.com and verified end-to-end with a real test submission — email arrived. The contact form is fully functional in production, not just in theory.
 
 ## What's left — grouped by what's needed from you
 
@@ -32,17 +33,10 @@
    Full walkthrough: `email-worker/SETUP.md` — needs the domain (below) first, then ~15 min
    of one-time setup. £0 cost beyond the domain itself.
 8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
-   change the repo name field to `Digital-Spectrum-Labs`, click Rename
-9. **Move hosting from Vercel to Netlify** (Vercel's free tier bans commercial use, Netlify's
-   doesn't):
-   - netlify.com → Sign up → Continue with GitHub
-   - Add new site → Import an existing project → GitHub → select the (renamed) repo
-   - Leave Build command blank, Publish directory `/` — it's a static site, nothing to build
-   - Deploy
-   - **Then turn on form notifications** so contact-form submissions actually reach you:
-     Site settings → Forms → Form notifications → Add notification → Email notification →
-     enter movesmakemoves@gmail.com → Save. Without this step, submissions are captured by
-     Netlify but nothing tells you they arrived.
+   change the repo name field to `Digital-Spectrum-Labs`, click Rename. (Netlify's deploy
+   source will need repointing to the new repo URL after — check Netlify still builds
+   correctly once this is done, GitHub renames usually auto-redirect but worth confirming.)
+9. ~~Move hosting from Vercel to Netlify~~ — **done 2026-08-04**, see above.
 
 ### Content — in progress
 10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,
