@@ -1,27 +1,36 @@
-# Izm Studio — Path to Launch
+# Digital Spectrum Labs — Path to Launch
+
+(renamed from Izm Media Services / Izm Studio — see design/what-we-built-and-why.md style notes if that history matters later)
 
 ## Done
 - [x] Full site built: home, services, packages, work, about, contact
-- [x] Brand/logo, dark theme, responsive layout
-- [x] Committed to git
+- [x] New brand: name, logo (prism/spectrum mark), full site rename
+- [x] Growth & Marketing added as a 5th service line (SEO, email marketing, social retainers, CRM setup)
+- [x] Monthly Retainer tier added to Packages, alongside Basic/Standard/Enhanced and Custom Web Applications
+- [x] Committed to git, pushed to GitHub (currently under repo name "Izm-Studio" — needs renaming to match)
+- [x] Deployed to Vercel (currently on a "Pro Trial" — needs migrating to Netlify instead, since Vercel's free tier bans commercial use and Netlify's allows it)
 
-## What's left
+## What's left — grouped by what's needed from you
 
-1. **Real portfolio content** — the Work page currently shows placeholder category
-   tiles ("Flyer Design," "CD Cover Art," etc.) with no actual samples. Needs real
-   images/case studies once available, or can launch as-is and fill in over time.
-2. **Domain name** — pick and register one (e.g. izmstudio.co.uk / .com).
-   Not yet purchased. A free `*.vercel.app` subdomain works for launch in the
-   meantime at zero cost.
-3. **Hosting/deployment** — currently the site only runs locally on this computer
-   via the desktop shortcut. Needs deploying somewhere public (recommend Vercel or
-   Netlify — free tier, minutes to set up for a static site like this) before anyone
-   outside this computer can see it.
-4. **Point the domain at the hosting** — a DNS step once #2 and #3 exist; can take
-   a few hours to a day to propagate, out of our control.
-5. **Real contact email** — `hello@izmstudio.com` is a placeholder; needs a
-   real inbox connected (either a proper business email or a forwarding address).
+### To accept payments on the site
+1. **Stripe account for Digital Spectrum Labs** (separate from the Hand Made By You one) — not created yet
+2. **Pricing model decision**: confirmed — want *both* fixed-price checkout for standard packages AND a deposit option for custom/larger work. Not yet built — needs Stripe Payment Links once the account exists
+3. **UK bank account** linked in Stripe for payouts — part of Stripe's own signup
+4. **Legal business details** — registered business name (sole trader or limited company?), address — needed for Stripe compliance, not yet provided
+5. **VAT status** — decided: not registering yet (turnover nowhere near the £90k threshold). Revisit if turnover approaches that.
+
+### To make the site live and findable
+6. **Domain name** (digitalspectrumlabs.com or .co.uk) — not yet purchased
+7. **Business email** — decided: new dedicated address, not personal Gmail. Plan: free Cloudflare Email Routing forwarding to existing Gmail, set up once the domain exists (~5 min, £0 cost)
+8. **Hosting migration** — move from Vercel to Netlify (commercial-use compliant on free tier)
+9. **GitHub repo rename** — currently "Izm-Studio", should match new name
+
+### Content, not urgent
+10. **Real portfolio content** — Work page still shows placeholder category tiles, no real samples yet. Can launch without this and fill in over time.
 
 ## What's NOT blocking launch
-Everything else — design, copy, structure, packages/pricing — is real and ready.
-This could go live as soon as #2–#4 are done; #1 and #5 can follow after.
+Design, copy, structure, all 5 services, and all 4 package tiers are real and ready.
+The site could go live (on a free subdomain, no custom domain yet) as soon as #8 is
+done. Payments (#1-5) and the custom domain (#6-7) can follow once you've gathered
+the account details above — none of it blocks getting the site itself live and
+viewable.
