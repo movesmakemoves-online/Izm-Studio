@@ -22,11 +22,26 @@
 ### To make the site live and findable
 6. **Domain name** (digitalspectrumlabs.com or .co.uk) — not yet purchased
 7. **Business email** — decided: new dedicated address, not personal Gmail. Plan: free Cloudflare Email Routing forwarding to existing Gmail, set up once the domain exists (~5 min, £0 cost)
-8. **Hosting migration** — move from Vercel to Netlify (commercial-use compliant on free tier)
-9. **GitHub repo rename** — currently "Izm-Studio", should match new name
+8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
+   change the repo name field to `Digital-Spectrum-Labs`, click Rename
+9. **Move hosting from Vercel to Netlify** (Vercel's free tier bans commercial use, Netlify's
+   doesn't):
+   - netlify.com → Sign up → Continue with GitHub
+   - Add new site → Import an existing project → GitHub → select the (renamed) repo
+   - Leave Build command blank, Publish directory `/` — it's a static site, nothing to build
+   - Deploy
 
-### Content, not urgent
-10. **Real portfolio content** — Work page still shows placeholder category tiles, no real samples yet. Can launch without this and fill in over time.
+### Content — in progress
+10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,
+    honestly-labeled "in development" case studies). Flyer design, CD covers, and AI
+    integration samples still placeholder — add when available.
+11. **About page** — rewritten with a real founder story (20+ years media background,
+    "needed it for myself, now sharing it") — currently marked as a placeholder draft in
+    the HTML for you to edit with concrete specifics when ready.
+12. **Team/founder photo** — flagged: an AI-generated *illustrative* image is fine to use;
+    an AI image presented as a literal photo of a specific real person or team that
+    doesn't exist risks misleading-advertising territory. Real photo is the safest bet
+    when you have one.
 
 ## What's NOT blocking launch
 Design, copy, structure, all 5 services, and all 4 package tiers are real and ready.
