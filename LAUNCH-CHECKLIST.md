@@ -23,20 +23,38 @@
 5. **VAT status** — decided: not registering yet (turnover nowhere near the £90k threshold). Revisit if turnover approaches that.
 
 ### To make the site live and findable
-6. **Domain name** (digitalspectrumlabs.com or .co.uk) — not yet purchased
-7. **Business email + automatic lead capture** — built 2026-08-04, not deployed yet:
-   `email-worker/` in this project folder is a real Cloudflare Email Worker that forwards
-   `leads@digitalspectrumlabs.com` to your Gmail (nothing lost) AND logs each lead as a file
-   in the GitHub repo (`leads/inbox/`) so Claude can see new leads without inbox access —
-   built this way specifically because Gmail and the Netlify/Cloudflare dashboards are
-   blocked from Claude's browser automation, so GitHub is the one place that actually works.
-   Full walkthrough: `email-worker/SETUP.md` — needs the domain (below) first, then ~15 min
-   of one-time setup. £0 cost beyond the domain itself.
+6. ~~Domain name~~ — **done**: `digitalspectrumlabs.co.uk` bought through Cloudflare Registrar
+   (at cost, no markup, free WHOIS privacy included).
+7. ~~Business email + automatic lead capture~~ — **done**: Cloudflare Email Routing set up,
+   Gmail verified as destination, `support@digitalspectrumlabs.co.uk` created and routed to
+   the deployed `dsl-lead-router` Worker, which forwards every email to Gmail AND logs it to
+   the GitHub repo. Worker deployed, `GITHUB_TOKEN` secret set.
+   **Still to do here:** point the custom domain at the Netlify site (Netlify → Domain
+   management → add `digitalspectrumlabs.co.uk`), and send one real test email to
+   `support@digitalspectrumlabs.co.uk` to confirm the whole chain works end to end.
 8. **Rename the GitHub repo** — go to github.com/movesmakemoves-online/Izm-Studio/settings,
    change the repo name field to `Digital-Spectrum-Labs`, click Rename. (Netlify's deploy
    source will need repointing to the new repo URL after — check Netlify still builds
    correctly once this is done, GitHub renames usually auto-redirect but worth confirming.)
+   Also update `GITHUB_REPO` in `email-worker/wrangler.toml` and redeploy the Worker after,
+   or the lead logging will break.
 9. ~~Move hosting from Vercel to Netlify~~ — **done 2026-08-04**, see above.
+
+### Legal — required before promoting to customers
+13. **Privacy policy and terms** — **drafted 2026-08-12**: `privacy.html` and `terms.html`
+    added and linked in the footer of every page. UK GDPR requires a privacy policy because
+    the contact form collects personal data. **Both contain `[PLACEHOLDER]` fields you must
+    fill in** (your legal name, business address, publish date, sole trader vs limited
+    company). These are solid working drafts, not legal advice — worth a solicitor's eye
+    before you take real money, especially the terms.
+14. **Trading details must be displayed** — UK law requires a sole trader to show their full
+    name and a business address on the website (limited companies must also show company
+    number and registered office). Currently the site only says "United Kingdom" — this needs
+    your real details adding, most naturally on the Contact page footer or the policy pages.
+15. **Cookie banner** — not needed right now: the site runs no analytics or advertising
+    trackers, and strictly-necessary cookies are exempt. **If you add Google Analytics or any
+    marketing pixel later, a consent banner becomes legally required** and the privacy policy
+    needs updating first.
 
 ### Content — in progress
 10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,
