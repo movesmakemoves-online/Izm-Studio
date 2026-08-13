@@ -72,7 +72,9 @@ revealEls.forEach((el) => revealObserver.observe(el));
 // Active nav link for current page
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-link').forEach((link) => {
-  if (link.getAttribute('href') === currentPage) {
+  // Strip any #anchor so links like contact.html#contact-details still match the page
+  const linkPage = (link.getAttribute('href') || '').split('#')[0];
+  if (linkPage === currentPage) {
     link.classList.add('active');
   }
 });

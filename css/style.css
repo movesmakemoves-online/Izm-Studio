@@ -551,7 +551,30 @@ p { margin: 0; color: var(--text-dim); }
 .stat-label { font-size: 0.85rem; color: var(--text-dim); }
 
 /* ---------- Contact ---------- */
-.contact-inner { display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: 60px; align-items: start; }
+.contact-inner { display: block; max-width: 620px; }
+
+/* Contact details, anchored so the Contact nav link jumps straight to them */
+.contact-details-section {
+  scroll-margin-top: 90px; /* clears the sticky header */
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+.contact-details-title { font-size: 1.5rem; margin-bottom: 20px; }
+.contact-details-section .contact-copy {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.contact-details-section .contact-detail { margin-top: 0; }
+@media (max-width: 700px) {
+  .contact-details-section .contact-copy { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* Anchor jumps glide rather than snap, unless the visitor prefers less motion */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 .contact-detail { margin-top: 20px; }
 .contact-detail strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); margin-bottom: 4px; }
 .contact-detail a, .contact-detail span { color: var(--text); font-size: 1rem; }
