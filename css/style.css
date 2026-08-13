@@ -389,7 +389,7 @@ p { margin: 0; color: var(--text-dim); }
 }
 
 /* ---------- Sections / grid ---------- */
-.section { padding: 100px 0; }
+.section { padding: 56px 0; }
 .section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .grid { display: grid; gap: 24px; }
@@ -551,7 +551,7 @@ p { margin: 0; color: var(--text-dim); }
 .stat-label { font-size: 0.85rem; color: var(--text-dim); }
 
 /* ---------- Contact ---------- */
-.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.contact-inner { display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: 60px; align-items: start; }
 .contact-detail { margin-top: 20px; }
 .contact-detail strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); margin-bottom: 4px; }
 .contact-detail a, .contact-detail span { color: var(--text); font-size: 1rem; }
@@ -615,8 +615,10 @@ p { margin: 0; color: var(--text-dim); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 /* ---------- Page hero (inner pages) ---------- */
-.page-hero { padding: 120px 0 60px; }
+.page-hero { padding: 52px 0 24px; }
 .page-hero .section-sub { margin-bottom: 0; }
+/* the first section after a page heading shouldn't restate the hero's bottom padding */
+.page-hero + .section { padding-top: 28px; }
 
 .link-more { margin-top: 40px; }
 
@@ -968,6 +970,7 @@ p { margin: 0; color: var(--text-dim); }
   .header-cta { display: none; }
   .nav-toggle { display: flex; }
   .grid-4, .grid-3 { grid-template-columns: 1fr; }
-  .hero { padding: 90px 0 60px; }
-  .section { padding: 70px 0; }
+  .hero { padding: 40px 0 20px; }
+  .section { padding: 40px 0; }
+  .page-hero { padding: 36px 0 18px; }
 }
