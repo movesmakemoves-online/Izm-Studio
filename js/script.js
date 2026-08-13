@@ -16,6 +16,39 @@ mainNav.querySelectorAll('.nav-link').forEach((link) => {
   });
 });
 
+// Services dropdown — hover works on desktop via CSS; this handles tap/click and keyboard
+document.querySelectorAll('.nav-item.has-dropdown').forEach((item) => {
+  const parentLink = item.querySelector('.nav-link--parent');
+  if (!parentLink) return;
+
+  parentLink.addEventListener('click', (e) => {
+    // On touch/narrow screens the parent link opens the menu instead of navigating
+    const isTouchLayout = window.matchMedia('(hover: none), (max-width: 860px)').matches;
+    if (isTouchLayout && !item.classList.contains('open')) {
+      e.preventDefault();
+      item.classList.add('open');
+      parentLink.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      item.classList.remove('open');
+      parentLink.setAttribute('aria-expanded', 'false');
+      parentLink.focus();
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.nav-item.has-dropdown.open').forEach((item) => {
+    if (!item.contains(e.target)) {
+      item.classList.remove('open');
+      item.querySelector('.nav-link--parent')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver(

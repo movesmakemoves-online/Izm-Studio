@@ -25,7 +25,19 @@
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="services.html" class="nav-link">Services</a>
+      <div class="nav-item has-dropdown">
+        <a href="services.html" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="service-websites.html">Websites, Apps &amp; Games</a>
+          <a href="service-ai.html">AI for Your Business</a>
+          <a href="service-growth.html">Growth &amp; Marketing</a>
+          <a href="service-video.html">Video Production</a>
+          <a href="service-design.html">Graphic Design</a>
+        </div>
+      </div>
       <a href="packages.html" class="nav-link">Packages</a>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
@@ -42,102 +54,42 @@
 
 <main>
 
-  <section class="page-hero">
+  <!-- WORK SHOWCASE -->
+  <section class="section showcase-section">
     <div class="container">
-      <p class="eyebrow reveal">What We Do</p>
-      <h1 class="section-title reveal">Everything Your Brand Needs, In-House.</h1>
-      <p class="section-sub reveal">Five disciplines, one team — so nothing gets lost in translation between vendors.</p>
-    </div>
-  </section>
+      <div class="showcase">
 
-  <section class="section service-detail" id="dev">
-    <div class="container service-detail-inner">
-      <div class="service-detail-copy reveal">
-        <p class="eyebrow">01 — Websites, Apps &amp; Games</p>
-        <h2 class="section-title">Built &amp; Developed End to End</h2>
-        <p>From a one-page landing site to a full product, we design and develop the whole thing — no separate designer-to-developer handoff, no lost detail.</p>
-        <ul class="detail-list">
-          <li>Business &amp; portfolio websites</li>
-          <li>E-commerce &amp; web apps</li>
-          <li>Mobile app builds</li>
-          <li>Custom / indie game development</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline">See Packages</a>
-      </div>
-      <div class="service-detail-visual reveal"><span class="service-detail-badge">Development</span></div>
-    </div>
-  </section>
+        <a class="showcase-item showcase-item--wide reveal" href="work.html">
+          <video src="assets/work/reel-production-rig.mp4" poster="assets/work/reel-production-rig-poster.webp" autoplay muted loop playsinline></video>
+          <span class="showcase-label">Video Production</span>
+        </a>
 
-  <section class="section section-alt service-detail" id="ai">
-    <div class="container service-detail-inner service-detail-inner--reverse">
-      <div class="service-detail-copy reveal">
-        <p class="eyebrow">02 — AI For Your Business</p>
-        <h2 class="section-title">Practical AI, Not Hype</h2>
-        <p>We help you use AI where it actually saves time — automating the busywork so you can focus on running the business.</p>
-        <ul class="detail-list">
-          <li>AI chatbots &amp; assistants</li>
-          <li>Workflow automation</li>
-          <li>AI content &amp; creative tools</li>
-          <li>AI strategy consulting</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline">See Packages</a>
-      </div>
-      <div class="service-detail-visual reveal"><span class="service-detail-badge">AI</span></div>
-    </div>
-  </section>
+        <a class="showcase-item reveal" href="service-design.html">
+          <img src="assets/work/flyer-get-found-online.webp" alt="Flyer design for a small business workshop" loading="lazy">
+          <span class="showcase-label">Graphic Design</span>
+        </a>
 
-  <section class="section service-detail" id="growth">
-    <div class="container service-detail-inner">
-      <div class="service-detail-copy reveal">
-        <p class="eyebrow">03 — Growth &amp; Marketing</p>
-        <h2 class="section-title">Get Found, Not Just Built</h2>
-        <p>A great website or app is only half the job — this is the other half: getting the right people to actually find it, and turning that traffic into paying customers.</p>
-        <ul class="detail-list">
-          <li>SEO &amp; search visibility</li>
-          <li>Email marketing &amp; automation</li>
-          <li>Social media management retainers</li>
-          <li>CRM &amp; marketing tech setup</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline">See Packages</a>
-      </div>
-      <div class="service-detail-visual reveal"><span class="service-detail-badge">Growth</span></div>
-    </div>
-  </section>
+        <a class="showcase-item reveal" href="service-ai.html">
+          <img src="assets/work/ai-network.webp" alt="Illustration of connected business tools around a central automation node" loading="lazy">
+          <span class="showcase-label">AI for Business</span>
+        </a>
 
-  <section class="section section-alt service-detail" id="video">
-    <div class="container service-detail-inner service-detail-inner--reverse">
-      <div class="service-detail-copy reveal">
-        <p class="eyebrow">04 — Video Production</p>
-        <h2 class="section-title">Cuts That Hit On The First Watch</h2>
-        <p>Music videos, short films, and promo edits — from a rough cut to full color grade, motion graphics, and sound design.</p>
-        <ul class="detail-list">
-          <li>Music video editing</li>
-          <li>Film &amp; short-form edits</li>
-          <li>Color grading</li>
-          <li>Motion graphics &amp; titles</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline">See Packages</a>
-      </div>
-      <div class="service-detail-visual reveal"><span class="service-detail-badge">Video</span></div>
-    </div>
-  </section>
+        <a class="showcase-item showcase-item--tall reveal" href="service-growth.html">
+          <video src="assets/work/reel-team-celebration.mp4" poster="assets/work/reel-team-celebration-poster.webp" autoplay muted loop playsinline></video>
+          <span class="showcase-label">Growth &amp; Marketing</span>
+        </a>
 
-  <section class="section service-detail" id="design">
-    <div class="container service-detail-inner">
-      <div class="service-detail-copy reveal">
-        <p class="eyebrow">05 — Graphic Design</p>
-        <h2 class="section-title">Flyers, Covers &amp; Brand Identity</h2>
-        <p>Design that's built to be looked at once and remembered. Whether it's a single event flyer or a full brand system, every piece is designed to work across print and social.</p>
-        <ul class="detail-list">
-          <li>Event flyers &amp; posters</li>
-          <li>CD / album / single cover art</li>
-          <li>Logo &amp; brand identity systems</li>
-          <li>Business cards &amp; print collateral</li>
-          <li>Social media graphic kits</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline">See Packages</a>
+        <a class="showcase-item reveal" href="work.html">
+          <video src="assets/work/reel-conference-stage.mp4" poster="assets/work/reel-conference-stage-poster.webp" autoplay muted loop playsinline></video>
+          <span class="showcase-label">Event Coverage</span>
+        </a>
+
+        <a class="showcase-item showcase-item--wide reveal" href="service-websites.html">
+          <video src="assets/work/reel-abstract-motion.mp4" poster="assets/work/reel-abstract-motion-poster.webp" autoplay muted loop playsinline></video>
+          <span class="showcase-label">Motion &amp; Web</span>
+        </a>
+
       </div>
-      <div class="service-detail-visual reveal"><span class="service-detail-badge">Design</span></div>
     </div>
   </section>
 

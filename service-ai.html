@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Digital Spectrum Labs</title>
-<meta name="description" content="Start a project with Digital Spectrum Labs — design, development, video editing, and AI solutions.">
+<title>AI for Your Business &mdash; Digital Spectrum Labs</title>
+<meta name="description" content="Practical AI for small businesses: chatbots, automation and strategy.">
 <link rel="icon" href="assets/dsl-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="contact">
+<body data-page="service-ai">
 
 <div class="bg-grid" aria-hidden="true"></div>
 <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
@@ -56,69 +56,35 @@
 
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow reveal">Get In Touch</p>
-      <h1 class="section-title reveal">Start Your Project</h1>
-      <p class="section-sub reveal">Tell us what you need and pick a starting package — we'll follow up with a custom quote.</p>
+      <p class="eyebrow reveal">Services</p>
+      <h1 class="section-title reveal">AI for Your Business</h1>
+      <p class="section-sub reveal">We help you use AI where it actually saves time &mdash; automating the busywork so you can focus on running the business.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container contact-inner">
-      <div class="contact-copy reveal">
-        <div class="contact-detail">
-          <strong>Email</strong>
-          <a href="mailto:movesmakemoves@gmail.com">movesmakemoves@gmail.com</a>
-        </div>
-        <div class="contact-detail">
-          <strong>Response Time</strong>
-          <span>Within 1–2 business days</span>
-        </div>
-        <div class="contact-detail">
-          <strong>Based In</strong>
-          <span>United Kingdom</span>
-        </div>
+  <section class="section service-detail">
+    <div class="container service-detail-inner">
+      <div class="service-detail-copy reveal">
+        <h2 class="section-title">Practical AI, Not Hype</h2>
+        <p>We help you use AI where it actually saves time &mdash; automating the busywork so you can focus on running the business.</p>
+        <ul class="detail-list">
+          <li>AI chatbots &amp; assistants</li>
+          <li>Workflow automation</li>
+          <li>AI content &amp; creative tools</li>
+          <li>AI strategy consulting</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+        <a href="services.html" class="btn btn-outline">All Services</a>
       </div>
+      <div class="service-detail-visual reveal"><span class="service-detail-badge">AI</span></div>
+    </div>
+  </section>
 
-      <form class="contact-form reveal" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden-field" hidden>
-          <label>Don't fill this out if you're human: <input name="bot-field"></label>
-        </p>
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-row">
-          <label for="service">Service</label>
-          <select id="service" name="service">
-            <option>Website / App / Game</option>
-            <option>AI for Business</option>
-            <option>Growth &amp; Marketing</option>
-            <option>Video Production</option>
-            <option>Graphic Design</option>
-            <option>Something else / mixed</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="package">Package</label>
-          <select id="package" name="package">
-            <option>Basic</option>
-            <option>Standard</option>
-            <option>Enhanced</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="message">Project Details</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Send Request</button>
-        <p class="form-status" id="form-status" role="status"></p>
-      </form>
+  <section class="section cta-band section-alt">
+    <div class="container cta-band-inner reveal">
+      <h2 class="section-title">Want to talk it through?</h2>
+      <p class="section-sub">Tell us what you need and we'll come back with a clear quote.</p>
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
     </div>
   </section>
 
