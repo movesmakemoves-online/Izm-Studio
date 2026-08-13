@@ -81,6 +81,5 @@ failed silently (email still isn't lost) — tell Claude and it'll check the Wor
 (`npx wrangler tail`) to diagnose.
 
 ## 11. Last step — point the site at the new address
-Once this is confirmed working, ask Claude to update the site's contact page to use
-`leads@digitalspectrumlabs.com` instead of the temporary `movesmakemoves@gmail.com` that's
-there now.
+Done — the contact page now shows `services@digitalspectrumlabs.co.uk`. Make sure a routing rule
+exists in Cloudflare for `services@` (not just `support@`), or mail to that address will bounce.

@@ -684,6 +684,84 @@ p { margin: 0; color: var(--text-dim); }
 .work-icon { width: 28px; height: 28px; fill: var(--accent); margin-bottom: auto; opacity: 0.85; }
 .work-status { font-size: 0.75rem; color: var(--text-faint); }
 
+/* ---------- Service page: video, options, info ---------- */
+.service-video-section { padding-bottom: 40px; }
+.service-page-title { margin-bottom: 26px; }
+.video-placeholder {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  aspect-ratio: 16 / 9;
+  max-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.video-placeholder-inner { max-width: 420px; padding: 24px; }
+.video-placeholder svg {
+  width: 46px; height: 46px;
+  fill: var(--accent);
+  opacity: 0.45;
+  margin-bottom: 12px;
+}
+.video-placeholder p { margin: 0; color: var(--text-dim); }
+.video-placeholder-note { font-size: 0.9rem; margin-top: 6px !important; color: var(--text-faint); }
+
+.option-section { padding-top: 20px; }
+.option-grid { align-items: stretch; }
+.option-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.option-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15,118,110,0.35);
+  box-shadow: 0 14px 32px rgba(30,42,40,0.10);
+}
+.option-step {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.option-card h2 { font-size: 1.15rem; margin: 0; }
+.option-card p { color: var(--text-dim); font-size: 0.95rem; margin: 0; }
+.option-cta {
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.info-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+.info-block .section-title { font-size: 1.35rem; margin-bottom: 16px; }
+/* Numbered variant: use the counter as the marker, not the square bullet */
+.detail-list--numbered { counter-reset: step; list-style: none; padding-left: 0; }
+.detail-list--numbered li { counter-increment: step; padding-left: 34px; }
+.detail-list--numbered li::before {
+  content: counter(step);
+  background: none;
+  width: auto; height: auto;
+  top: 10px;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  border-radius: 0;
+}
+@media (max-width: 860px) {
+  .info-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+
 /* ---------- Work showcase mosaic ---------- */
 .showcase-section { padding-top: 70px; }
 .showcase {

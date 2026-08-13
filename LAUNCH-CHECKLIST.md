@@ -57,6 +57,18 @@
     needs updating first.
 
 ### Content — in progress
+16. **Film a short video for each of the five service pages** — each page
+    (`service-websites`, `service-ai`, `service-growth`, `service-video`,
+    `service-design`) currently shows a dashed "Video placeholder" box at the top where the
+    video goes. Each one should explain what that service is and how easy it is to get
+    started. Once filmed, send them over and they get dropped straight in — the slot is
+    already built and styled.
+17. **Create `services@digitalspectrumlabs.co.uk` in Cloudflare Email Routing** — the site
+    now shows this address on the Contact page, but the routing rule set up earlier was for
+    `support@`. Until `services@` exists as a rule, mail sent to it will bounce.
+    Cloudflare → Email Routing → Routing rules → Create address → `services` →
+    Send to a Worker (`dsl-lead-router`) or Send to an email → Save.
+
 10. **Real portfolio content** — done for Hand Made By You and Little VIPs (added as real,
     honestly-labeled "in development" case studies). Flyer design, CD covers, and AI
     integration samples still placeholder — add when available.

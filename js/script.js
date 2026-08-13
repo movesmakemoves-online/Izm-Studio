@@ -92,7 +92,7 @@ if (contactForm) {
         contactForm.reset();
       })
       .catch(() => {
-        formStatus.textContent = 'Something went wrong sending that — please email movesmakemoves@gmail.com directly instead.';
+        formStatus.textContent = 'Something went wrong sending that — please email services@digitalspectrumlabs.co.uk directly instead.';
       });
   });
 }
