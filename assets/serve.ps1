@@ -9,6 +9,8 @@ $mime = @{
   ".html" = "text/html"; ".css" = "text/css"; ".js" = "application/javascript"
   ".png" = "image/png"; ".jpg" = "image/jpeg"; ".jpeg" = "image/jpeg"
   ".svg" = "image/svg+xml"; ".ico" = "image/x-icon"
+  ".webp" = "image/webp"; ".mp4" = "video/mp4"; ".webm" = "video/webm"
+  ".woff" = "font/woff"; ".woff2" = "font/woff2"; ".json" = "application/json"
 }
 
 while ($listener.IsListening) {
