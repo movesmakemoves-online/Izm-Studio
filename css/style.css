@@ -183,7 +183,8 @@ p { margin: 0; color: var(--text-dim); }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
-.hero { padding: 56px 0 56px; position: relative; overflow: hidden; }
+.hero { padding: 56px 0 20px; position: relative; overflow: hidden; }
+#services { padding-top: 36px; }
 .hero-inner { max-width: 860px; position: relative; z-index: 1; }
 
 /* ---------- Moving work strip under the header ---------- */
@@ -300,6 +301,7 @@ p { margin: 0; color: var(--text-dim); }
   color: var(--text);
   padding-top: 4px;
 }
+.hero-copy.post-services { margin: 48px 0 32px; }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
 
