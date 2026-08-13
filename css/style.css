@@ -202,6 +202,31 @@ p { margin: 0; color: var(--text-dim); }
 }
 .dropdown a:hover { background: var(--surface-2); color: var(--accent); }
 
+/* Same dropdown, used as a button lower down the page */
+.service-picker { position: relative; display: inline-block; }
+.service-picker .dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.service-picker.open .nav-caret { transform: rotate(180deg); }
+.dropdown--wide { min-width: 260px; left: 0; transform: translateX(0) translateY(-6px); }
+.service-picker:hover .dropdown--wide,
+.service-picker.open .dropdown--wide,
+.service-picker:focus-within .dropdown--wide {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) translateY(0);
+}
+.dropdown-all {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 12px !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

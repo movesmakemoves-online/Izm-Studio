@@ -16,35 +16,40 @@ mainNav.querySelectorAll('.nav-link').forEach((link) => {
   });
 });
 
-// Services dropdown — hover works on desktop via CSS; this handles tap/click and keyboard
-document.querySelectorAll('.nav-item.has-dropdown').forEach((item) => {
-  const parentLink = item.querySelector('.nav-link--parent');
-  if (!parentLink) return;
+// Dropdowns — hover works on desktop via CSS; this handles tap/click and keyboard.
+// Covers both the Services nav item and the button lower down the homepage.
+document.querySelectorAll('.has-dropdown').forEach((item) => {
+  const trigger = item.querySelector('.nav-link--parent, .dropdown-trigger');
+  if (!trigger) return;
 
-  parentLink.addEventListener('click', (e) => {
-    // On touch/narrow screens the parent link opens the menu instead of navigating
+  const isButton = trigger.tagName === 'BUTTON';
+
+  trigger.addEventListener('click', (e) => {
+    // A button always toggles. A link only intercepts on touch/narrow layouts,
+    // where hover doesn't exist — otherwise it should still navigate.
     const isTouchLayout = window.matchMedia('(hover: none), (max-width: 860px)').matches;
-    if (isTouchLayout && !item.classList.contains('open')) {
+    if (isButton || (isTouchLayout && !item.classList.contains('open'))) {
       e.preventDefault();
-      item.classList.add('open');
-      parentLink.setAttribute('aria-expanded', 'true');
+      const nowOpen = !item.classList.contains('open');
+      item.classList.toggle('open', nowOpen);
+      trigger.setAttribute('aria-expanded', String(nowOpen));
     }
   });
 
   item.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       item.classList.remove('open');
-      parentLink.setAttribute('aria-expanded', 'false');
-      parentLink.focus();
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.focus();
     }
   });
 });
 
 document.addEventListener('click', (e) => {
-  document.querySelectorAll('.nav-item.has-dropdown.open').forEach((item) => {
+  document.querySelectorAll('.has-dropdown.open').forEach((item) => {
     if (!item.contains(e.target)) {
       item.classList.remove('open');
-      item.querySelector('.nav-link--parent')?.setAttribute('aria-expanded', 'false');
+      item.querySelector('.nav-link--parent, .dropdown-trigger')?.setAttribute('aria-expanded', 'false');
     }
   });
 });
